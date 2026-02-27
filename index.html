@@ -15,25 +15,14 @@ body {
     color: gold;
     text-align: center;
     scroll-behavior: smooth;
+    min-height: 100vh;
+    position: relative; /* required for banners */
 }
-  min-height: 100vh; /* ensures body always fills viewport */
-    position: relative; /* for absolute banners */
+
 h1, h2, h3 {
     font-family: 'Playfair Display', serif;
 }
-.products {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin: 50px 180px; /* more space from sides for full-height banners */
-}
 
-    body::after {
-    content: "";
-    display: block;
-    height: 300px; /* adjust until lengths are similar */
-}
 /* ---------- Navbar ---------- */
 .navbar {
     position: sticky;
@@ -52,6 +41,8 @@ h1, h2, h3 {
     list-style: none;
     display: flex;
     gap: 30px;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links li a {
@@ -90,9 +81,9 @@ header {
 /* ---------- Banners ---------- */
 .banner-left, .banner-right {
     position: absolute;
-    top: 250px;
+    top: 0;
     width: 150px;
-    height: 400px;
+    height: 100vh; /* full viewport height */
     background: linear-gradient(135deg, #333, #555);
     border: 2px dashed gold;
     display: flex;
@@ -102,26 +93,12 @@ header {
     font-weight: bold;
     font-size: 18px;
     border-radius: 10px;
-    animation-duration: 1s;
     animation-fill-mode: forwards;
 }
 
-.banner-left {
-    left: 0;
-    animation-name: fadeLeft;
-}
+.banner-left { left: 0; animation: fadeLeft 1s ease forwards; }
+.banner-right { right: 0; animation: fadeRight 1s ease forwards; }
 
-.banner-right {
-    right: 0;
-    animation-name: fadeRight;
-
-    
-}
-
-   {
-    height: 100vh; /* full viewport height */
-    top: 0;
-}
 @keyframes fadeLeft {
     from { opacity: 0; transform: translateX(-40px);}
     to { opacity: 1; transform: translateX(0);}
@@ -132,13 +109,13 @@ header {
     to { opacity: 1; transform: translateX(0);}
 }
 
-/* ---------- Product & Review Cards ---------- */
+/* ---------- Products & Reviews ---------- */
 .products {
     display: flex;
     justify-content: center;
-    gap: 30px;
     flex-wrap: wrap;
-    margin: 50px 160px; /* leave space for banners */
+    gap: 30px;
+    margin: 50px 180px; /* leave space for banners */
 }
 
 .product-card, .review-card {
@@ -231,6 +208,13 @@ footer {
 .whatsapp-btn:hover {
     transform: scale(1.1);
 }
+
+/* ---------- Optional Page Bottom Spacer ---------- */
+body::after {
+    content: "";
+    display: block;
+    height: 200px; /* helps match Page 2 length */
+}
 </style>
 </head>
 <body>
@@ -263,21 +247,21 @@ footer {
 <div class="section" id="collection">
 <h2>Our Collection</h2>
 <div class="products">
-<div class="product-card">
-<h3>Bags</h3>
-<p>Premium and trendy designs.</p>
-<a href="collection.html"><button>View Collection</button></a>
-</div>
-<div class="product-card">
-<h3>Jewellery</h3>
-<p>Elegant & statement pieces.</p>
-<a href="collection.html"><button>View Collection</button></a>
-</div>
-<div class="product-card">
-<h3>Dresses</h3>
-<p>Fashion-forward and classy.</p>
-<a href="collection.html"><button>View Collection</button></a>
-</div>
+    <div class="product-card">
+        <h3>Bags</h3>
+        <p>Premium and trendy designs.</p>
+        <a href="collection.html"><button>View Collection</button></a>
+    </div>
+    <div class="product-card">
+        <h3>Jewellery</h3>
+        <p>Elegant & statement pieces.</p>
+        <a href="collection.html"><button>View Collection</button></a>
+    </div>
+    <div class="product-card">
+        <h3>Dresses</h3>
+        <p>Fashion-forward and classy.</p>
+        <a href="collection.html"><button>View Collection</button></a>
+    </div>
 </div>
 </div>
 
@@ -294,16 +278,16 @@ footer {
 <div class="section">
 <h2>What Our Customers Say</h2>
 <div class="products">
-<div class="review-card">
-<p>⭐⭐⭐⭐⭐</p>
-<p>"Absolutely loved the jewellery quality. It looks premium!"</p>
-<p><strong>- Rose</strong></p>
-</div>
-<div class="review-card">
-<p>⭐⭐⭐⭐⭐</p>
-<p>"The bag I ordered was stylish and affordable."</p>
-<p><strong>- Lily</strong></p>
-</div>
+    <div class="review-card">
+        <p>⭐⭐⭐⭐⭐</p>
+        <p>"Absolutely loved the jewellery quality. It looks premium!"</p>
+        <p><strong>- Rose</strong></p>
+    </div>
+    <div class="review-card">
+        <p>⭐⭐⭐⭐⭐</p>
+        <p>"The bag I ordered was stylish and affordable."</p>
+        <p><strong>- Lily</strong></p>
+    </div>
 </div>
 </div>
 
@@ -321,10 +305,10 @@ and dedication to timeless fashion.
 <div class="section" id="gallery">
 <h2>Gallery</h2>
 <div class="gallery-container">
-  <div class="gallery-item"><img src="gallery1.jpg" alt="Gallery 1"></div>
-  <div class="gallery-item"><img src="gallery2.jpg" alt="Gallery 2"></div>
-  <div class="gallery-item"><img src="gallery3.jpg" alt="Gallery 3"></div>
-  <div class="gallery-item"><img src="gallery4.jpg" alt="Gallery 4"></div>
+    <div class="gallery-item"><img src="gallery1.jpg" alt="Gallery 1"></div>
+    <div class="gallery-item"><img src="gallery2.jpg" alt="Gallery 2"></div>
+    <div class="gallery-item"><img src="gallery3.jpg" alt="Gallery 3"></div>
+    <div class="gallery-item"><img src="gallery4.jpg" alt="Gallery 4"></div>
 </div>
 </div>
 
