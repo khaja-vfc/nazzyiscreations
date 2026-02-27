@@ -48,13 +48,13 @@
 <div class="review-card">
 <p>⭐⭐⭐⭐⭐</p>
 <p>"Absolutely loved the jewellery quality. It looks premium!"</p>
-<p><strong>-rose</strong></p>
+<p><strong>- Ayesha</strong></p>
 </div>
 
 <div class="review-card">
 <p>⭐⭐⭐⭐⭐</p>
 <p>"The bag I ordered was stylish and affordable."</p>
-<p><strong>- lily</strong></p>
+<p><strong>- Sana</strong></p>
 </div>
 
 </div>
@@ -78,9 +78,114 @@ Hyderabad-based boutique offering elegant jewellery, stylish bags, and trendy dr
 crafted to elevate your confidence.
 </p>
 </div>
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #000000, #1a1a1a);
+    color: gold;
+    text-align: center;
+    scroll-behavior: smooth;
+}
 
+/* Smooth fade animation */
+.section {
+    padding: 70px 20px;
+    animation: fadeUp 1s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+header {
+    padding: 80px 20px;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.product-card, .review-card {
+    background: linear-gradient(145deg, #111, #1c1c1c);
+    padding: 25px;
+    border: 1px solid gold;
+    width: 260px;
+    border-radius: 15px;
+    transition: 0.4s;
+}
+
+.product-card:hover,
+.review-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 0 25px gold;
+}
+
+button {
+    background: linear-gradient(45deg, gold, #d4af37);
+    border: none;
+    padding: 14px 28px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: white;
+    color: black;
+}
+
+.founder-section {
+    max-width: 850px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    transition: 0.3s;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    padding: 30px;
+    border-top: 1px solid gold;
+    margin-top: 40px;
+    background-color: #000;
+}
+</style>
 <footer>
 <p>© 2026 Nazzyi's Creations | Hyderabad</p>
 </footer>
 
 </body>
+
