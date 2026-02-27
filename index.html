@@ -21,7 +21,19 @@ body {
 h1, h2, h3 {
     font-family: 'Playfair Display', serif;
 }
+.products {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 50px 180px; /* more space from sides for full-height banners */
+}
 
+    body::after {
+    content: "";
+    display: block;
+    height: 300px; /* adjust until lengths are similar */
+}
 /* ---------- Navbar ---------- */
 .navbar {
     position: sticky;
