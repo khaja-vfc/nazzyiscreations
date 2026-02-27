@@ -2,24 +2,158 @@
 <html>
 <head>
 <title>Our Collection | Nazzyi's Creations</title>
-<link rel="stylesheet" href="style.css">
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #000000, #1a1a1a);
+    color: gold;
+    text-align: center;
+}
+
+h1 {
+    margin: 40px 0 20px;
+    font-size: 48px;
+    letter-spacing: 2px;
+}
+
+/* Banner Section */
+.banner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: auto 0 50px;
+}
+
+.banner-left, .banner-right {
+  flex: 1 1 400px;
+  height: 250px;
+}
+
+.placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #333, #555);
+  border: 2px dashed gold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: gold;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 15px;
+}
+
+/* Products Grid */
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.product-card {
+    background: linear-gradient(145deg, #111, #1c1c1c);
+    padding: 25px;
+    border: 1px solid gold;
+    width: 260px;
+    border-radius: 15px;
+    transition: 0.4s;
+    text-align: center;
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.product-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 0 25px gold;
+}
+
+button {
+    background: linear-gradient(45deg, gold, #d4af37);
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: white;
+    color: black;
+}
+</style>
 </head>
 <body>
 
 <h1>Our Collection</h1>
 
+<!-- LEFT-RIGHT BANNER -->
+<div class="banner-container">
+  <div class="banner-left">
+    <div class="placeholder">Left Banner</div>
+  </div>
+  <div class="banner-right">
+    <div class="placeholder">Right Banner</div>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
 <div class="products">
 
+<!-- Bags -->
 <div class="product-card">
-<img src="bag1.jpg" width="200">
+<img src="bag1.jpg" alt="Luxury Handbag">
 <h3>Luxury Handbag</h3>
 <p>₹2,499</p>
+<a href="bags.html"><button>View Collection</button></a>
 </div>
 
 <div class="product-card">
-<img src="jewel1.jpg" width="200">
+<img src="bag2.jpg" alt="Casual Tote">
+<h3>Casual Tote</h3>
+<p>₹1,799</p>
+<a href="bags.html"><button>View Collection</button></a>
+</div>
+
+<!-- Jewellery -->
+<div class="product-card">
+<img src="jewel1.jpg" alt="Gold Necklace">
 <h3>Gold Necklace</h3>
 <p>₹1,999</p>
+<a href="jewellery.html"><button>View Collection</button></a>
+</div>
+
+<div class="product-card">
+<img src="jewel2.jpg" alt="Silver Earrings">
+<h3>Silver Earrings</h3>
+<p>₹1,299</p>
+<a href="jewellery.html"><button>View Collection</button></a>
+</div>
+
+<!-- Dresses -->
+<div class="product-card">
+<img src="dress1.jpg" alt="Evening Dress">
+<h3>Evening Dress</h3>
+<p>₹3,499</p>
+<a href="dresses.html"><button>View Collection</button></a>
+</div>
+
+<div class="product-card">
+<img src="dress2.jpg" alt="Summer Dress">
+<h3>Summer Dress</h3>
+<p>₹2,199</p>
+<a href="dresses.html"><button>View Collection</button></a>
 </div>
 
 </div>
