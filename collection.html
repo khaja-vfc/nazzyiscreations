@@ -9,24 +9,22 @@
 <style>
 /* ---------- Global Styles ---------- */
 body {
+  body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     background: linear-gradient(135deg, #000000, #1a1a1a);
     color: gold;
     text-align: center;
+    min-height: 100vh;
+    position: relative;
+    scroll-behavior: smooth;
 }
 
-h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
-    margin: 20px 0;
-}
-
-/* ---------- Banners ---------- */
 .banner-left, .banner-right {
     position: absolute;
-    top: 200px;
+    top: 0;
     width: 150px;
-    height: 500px;
+    height: 100vh; /* full viewport height */
     background: linear-gradient(135deg, #333, #555);
     border: 2px dashed gold;
     display: flex;
@@ -42,22 +40,12 @@ h1, h2, h3 {
 .banner-left { left: 0; animation: fadeLeft 1s ease forwards; }
 .banner-right { right: 0; animation: fadeRight 1s ease forwards; }
 
-@keyframes fadeLeft {
-    from { opacity: 0; transform: translateX(-40px);}
-    to { opacity: 1; transform: translateX(0);}
-}
-@keyframes fadeRight {
-    from { opacity: 0; transform: translateX(40px);}
-    to { opacity: 1; transform: translateX(0);}
-}
-
-/* ---------- Products Grid ---------- */
 .products {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
-    margin: 50px 160px; /* leave space for banners */
+    margin: 80px 180px; /* leaves space for banners */
 }
 
 .product-card {
