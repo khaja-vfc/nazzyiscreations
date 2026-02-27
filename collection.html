@@ -9,7 +9,6 @@
 <style>
 /* ---------- Global Styles ---------- */
 body {
-  body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     background: linear-gradient(135deg, #000000, #1a1a1a);
@@ -20,6 +19,12 @@ body {
     scroll-behavior: smooth;
 }
 
+/* ---------- Fonts ---------- */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* ---------- Banners ---------- */
 .banner-left, .banner-right {
     position: absolute;
     top: 0;
@@ -40,12 +45,13 @@ body {
 .banner-left { left: 0; animation: fadeLeft 1s ease forwards; }
 .banner-right { right: 0; animation: fadeRight 1s ease forwards; }
 
+/* ---------- Products ---------- */
 .products {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
-    margin: 80px 180px; /* leaves space for banners */
+    margin: 80px 180px; /* leave space for banners */
 }
 
 .product-card {
@@ -71,7 +77,13 @@ body {
     box-shadow: 0 0 25px gold;
 }
 
-/* ---------- Gallery Section ---------- */
+/* ---------- Gallery ---------- */
+.section {
+    padding: 70px 20px;
+    animation: fadeUp 1s ease forwards;
+    opacity: 0;
+}
+
 .gallery-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -96,11 +108,27 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes fadeLeft {
+    from { opacity: 0; transform: translateX(-40px);}
+    to { opacity: 1; transform: translateX(0);}
+}
+
+@keyframes fadeRight {
+    from { opacity: 0; transform: translateX(40px);}
+    to { opacity: 1; transform: translateX(0);}
+}
+
+/* ---------- Optional Page Bottom Spacer ---------- */
+body::after {
+    content: "";
+    display: block;
+    height: 200px; /* helps match Page 1 length */
+}
 </style>
 </head>
 <body>
 
-<h1> Our Top Picks</h1>
+<h1>Our Top Picks</h1>
 
 <!-- Banners -->
 <div class="banner-left">Left Banner</div>
