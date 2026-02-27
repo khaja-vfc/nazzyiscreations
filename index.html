@@ -1,24 +1,15 @@
 <body>
 
 <header>
-    <img src="logo.png.png" width="120" alt="Nazzy'is Creations Logo">
+    <img src="logo.png" width="120" alt="Nazzyi's Creations Logo">
     <h1>Nazzyi's Creations</h1>
     <p>Made to match your style ✨</p>
 </header>
-<!-- LEFT-RIGHT BANNER -->
-<div class="section banner-section">
-  <div class="banner-container">
-    <div class="banner-left">
-      <!-- Add your left image here -->
-      <div class="placeholder">Left Image</div>
-    </div>
-    <div class="banner-right">
-      <!-- Add your right image here -->
-      <div class="placeholder">Right Image</div>
-    </div>
-  </div>
-</div>
-    
+
+<!-- LEFT-RIGHT BANNERS -->
+<div class="banner-left">Left Banner</div>
+<div class="banner-right">Right Banner</div>
+
 <!-- OUR COLLECTION -->
 <div class="section">
 <h2>Our Collection</h2>
@@ -28,25 +19,19 @@
 <div class="product-card">
 <h3>Bags</h3>
 <p>Premium and trendy designs.</p>
-<a href="collection.html">
-<button>View Collection</button>
-</a>
+<a href="collection.html"><button>View Collection</button></a>
 </div>
 
 <div class="product-card">
 <h3>Jewellery</h3>
 <p>Elegant & statement pieces.</p>
-    <a href="collection.html">
-<button>View Collection</button>
-</a>
+<a href="collection.html"><button>View Collection</button></a>
 </div>
 
 <div class="product-card">
 <h3>Dresses</h3>
 <p>Fashion-forward and classy.</p>
-    <a href="collection.html">
-<button>View Collection</button>
-</a>
+<a href="collection.html"><button>View Collection</button></a>
 </div>
 
 </div>
@@ -76,7 +61,7 @@
 <div class="review-card">
 <p>⭐⭐⭐⭐⭐</p>
 <p>"The bag I ordered was stylish and affordable."</p>
-<p><strong>- lily</strong></p>
+<p><strong>- Lily</strong></p>
 </div>
 
 </div>
@@ -100,6 +85,7 @@ Hyderabad-based boutique offering elegant jewellery, stylish bags, and trendy dr
 crafted to elevate your confidence.
 </p>
 </div>
+
 <style>
 body {
     margin: 0;
@@ -110,7 +96,6 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Smooth fade animation */
 .section {
     padding: 70px 20px;
     animation: fadeUp 1s ease forwards;
@@ -146,6 +131,7 @@ h1 {
     width: 260px;
     border-radius: 15px;
     transition: 0.4s;
+    text-align: center;
 }
 
 .product-card:hover,
@@ -162,6 +148,7 @@ button {
     font-weight: bold;
     border-radius: 30px;
     transition: 0.3s;
+    margin-top: 10px;
 }
 
 button:hover {
@@ -204,38 +191,35 @@ footer {
     margin-top: 40px;
     background-color: #000;
 }
-.banner-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap; /* Responsive on smaller screens */
-  max-width: 1000px;
-  margin: auto;
-}
 
+/* Left-right banners */
 .banner-left, .banner-right {
-  flex: 1 1 400px;
-  height: 250px; /* Adjust height as needed */
+    position: absolute;
+    top: 200px; /* adjust vertical position */
+    width: 150px;
+    height: 400px;
+    background: linear-gradient(135deg, #333, #555);
+    border: 2px dashed gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gold;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 10px;
 }
 
-.placeholder {
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, #333, #555);
-  border: 2px dashed gold;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: gold;
-  font-weight: bold;
-  font-size: 18px;
-  border-radius: 15px;
+.banner-left {
+    left: 0;
+}
+
+.banner-right {
+    right: 0;
 }
 </style>
+
 <footer>
 <p>© 2026 Nazzyi's Creations | Hyderabad</p>
 </footer>
 
 </body>
-
