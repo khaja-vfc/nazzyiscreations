@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nazzyis Creations | Hyderabad Boutique</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: gold;
+            text-align: center;
+        }
+
+        header {
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: white;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            margin: 10px;
+            background: gold;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .section {
+            padding: 40px 20px;
+        }
+
+        .product {
+            background: #111;
+            margin: 20px auto;
+            padding: 20px;
+            width: 80%;
+            border-radius: 10px;
+        }
+
+        footer {
+            background: #111;
+            padding: 20px;
+            margin-top: 40px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Nazzyis Creations</h1>
+    <p>Made to match your style</p>
+    <p><strong>Serving Hyderabad Only</strong></p>
+    <a class="btn" href="#collections">Shop Now</a>
+</header>
+
+<section class="section" id="collections">
+    <h2>Our Collections</h2>
+
+    <div class="product">
+        <h3>Premium Bags</h3>
+        <p>Stylish handbags for every occasion.</p>
+        <a class="btn" href="https://wa.me/91XXXXXXXXXX">Order on WhatsApp</a>
+    </div>
+
+    <div class="product">
+        <h3>Elegant Jewellery</h3>
+        <p>Luxury jewellery to enhance your beauty.</p>
+        <a class="btn" href="https://wa.me/91XXXXXXXXXX">Order on WhatsApp</a>
+    </div>
+
+    <div class="product">
+        <h3>Trendy Dresses</h3>
+        <p>Modern and traditional styles available.</p>
+        <a class="btn" href="https://wa.me/91XXXXXXXXXX">Order on WhatsApp</a>
+    </div>
+
+</section>
+
+<section class="section">
+    <h2>About Us</h2>
+    <p>
+        Nazzyis Creations is a Hyderabad-based fashion boutique offering premium bags,
+        elegant jewellery, and trendy dresses. We focus on quality, style,
+        and fast delivery within Hyderabad.
+    </p>
+</section>
+
+<section class="section">
+    <h2>Contact Us</h2>
+    <a class="btn" href="https://wa.me/91XXXXXXXXXX">Chat on WhatsApp</a>
+    <a class="btn" href="https://instagram.com/YOURUSERNAME">Visit Instagram</a>
+</section>
+
+<footer>
+    © 2026 Nazzyis Creations | Hyderabad
+</footer>
+
+</body>
+</html>
